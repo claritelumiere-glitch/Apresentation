@@ -26,6 +26,14 @@
       rel="stylesheet"
     />
 
+    <!-- Leaflet (mapa interativo) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -152,91 +160,152 @@
 
     <!-- Institucional Section -->
     <section id="institucional" class="institucional">
-      <div class="container">
-        <div class="institucional-header animate-on-scroll">
-          <h2 class="section-title">Quem Somos</h2>
-          <p class="institucional-intro">
-            A Clarité Lumière nasceu da união de propósitos e da identificação
-            de um mercado com potencial inexplorado. Somos um casal de
-            empreendedores que escolheu unir a vida pessoal à parceria
-            profissional, somando expertise técnica e gestão estratégica em
-            uma única marca.
+      <div class="institucional-hero animate-on-scroll">
+        <div class="container">
+          <span class="eyebrow">Institucional</span>
+          <h2 class="institucional-title">Quem Somos</h2>
+          <div class="ornament">
+            <span></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+            </svg>
+            <span></span>
+          </div>
+          <p class="institucional-lead">
+            Nascida da união de propósitos e da identificação de um
+            mercado com potencial inexplorado. Somos um casal de
+            empreendedores que escolheu unir <em>vida pessoal</em> à
+            <em>parceria profissional</em>, somando expertise técnica e
+            gestão estratégica em uma única marca.
           </p>
         </div>
+      </div>
 
-        <div class="mvv-grid">
-          <div class="mvv-card animate-on-scroll">
+      <div class="container">
+        <div class="pillars">
+          <article class="pillar animate-on-scroll">
+            <span class="pillar-num">01</span>
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18h6"/>
+                <path d="M10 22h4"/>
+                <path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V18h6v-1.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/>
+              </svg>
+            </div>
             <h3>Missão</h3>
             <p>
-              Proporcionar clareza e bem-estar por meio de soluções inovadoras
-              e exclusivas em um mercado de alto potencial, unindo expertise
-              técnica à gestão estratégica para oferecer uma experiência
-              transformadora aos nossos clientes.
+              Proporcionar clareza e bem-estar por meio de soluções
+              inovadoras e exclusivas em um mercado de alto potencial,
+              unindo expertise técnica à gestão estratégica para oferecer
+              uma experiência transformadora aos nossos clientes.
             </p>
-          </div>
-          <div class="mvv-card animate-on-scroll">
+          </article>
+
+          <article class="pillar pillar-featured animate-on-scroll">
+            <span class="pillar-num">02</span>
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
             <h3>Visão</h3>
             <p>
-              Tornar-se referência no setor, sendo reconhecida pela
-              excelência, pela capacidade de trazer o inédito ao mercado e
-              por construir uma marca sólida que ilumina a rotina e as
+              Tornar-se referência no setor, reconhecida pela
+              excelência, pela capacidade de trazer o inédito ao mercado
+              e por construir uma marca sólida que ilumina a rotina e as
               escolhas de nossos consumidores.
             </p>
-          </div>
-          <div class="mvv-card animate-on-scroll">
+          </article>
+
+          <article class="pillar animate-on-scroll">
+            <span class="pillar-num">03</span>
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L9.5 8.5 2 9l5.5 4.8L6 22l6-3.5L18 22l-1.5-8.2L22 9l-7.5-.5L12 2z"/>
+              </svg>
+            </div>
             <h3>Valores</h3>
-            <ul>
-              <li><strong>Parceria e Complementaridade</strong></li>
-              <li><strong>Inovação com Propósito</strong></li>
-              <li><strong>Transparência e Clareza</strong></li>
-              <li><strong>Comprometimento</strong></li>
+            <ul class="pillar-list">
+              <li>Parceria e Complementaridade</li>
+              <li>Inovação com Propósito</li>
+              <li>Transparência e Clareza</li>
+              <li>Comprometimento</li>
             </ul>
+          </article>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-text animate-on-scroll">
+            <span class="story-tag">Fundadores</span>
+            <h3>Duas visões, um propósito</h3>
+            <p>
+              O <strong>sócio</strong> traz a expertise técnica e o
+              olhar apurado de quem já empreendeu no ramo, entendendo as
+              nuances e desafios específicos do setor.
+            </p>
+            <p>
+              A <strong>sócia</strong>, administradora de empresas com
+              vivência empreendedora, traz a estrutura, o planejamento e
+              a visão estratégica para escalar o negócio de forma
+              organizada e sustentável.
+            </p>
+          </div>
+          <div class="story-quote animate-on-scroll">
+            <svg class="quote-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a2 2 0 0 1-2 2H4v2h1a4 4 0 0 0 4-4V7zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a2 2 0 0 1-2 2h-1v2h1a4 4 0 0 0 4-4V7z"/>
+            </svg>
+            <p>
+              A soma da técnica especializada com a gestão profissional
+              é o nosso maior diferencial.
+            </p>
           </div>
         </div>
 
-        <div class="institucional-blocks">
-          <div class="institucional-block animate-on-scroll">
-            <h3>Trajetória dos Fundadores</h3>
-            <p>
-              Nossa trajetória é marcada pela soma de experiências distintas.
-              O <strong>sócio</strong> traz a expertise técnica e o olhar
-              apurado de quem já empreendeu no ramo, entendendo as nuances e
-              desafios específicos do setor. A <strong>sócia</strong>,
-              administradora de empresas com vivência empreendedora, traz a
-              estrutura, o planejamento e a visão estratégica para escalar o
-              negócio de forma organizada e sustentável.
-            </p>
-          </div>
-
-          <div class="institucional-block animate-on-scroll">
-            <h3>Objetivo da Empresa</h3>
+        <div class="reach-grid animate-on-scroll">
+          <div class="reach-card reach-objective">
+            <span class="reach-label">Nosso Objetivo</span>
+            <h3>Iluminar o que ainda não foi explorado</h3>
             <p>
               Consolidar a Clarité Lumière como uma marca inovadora,
-              explorando nichos de mercado com grande potencial de
-              crescimento que ainda carecem de soluções diferenciadas.
-              Entregamos produtos que tragam clareza e novidade, com
-              excelência operacional e foco no cliente.
+              explorando nichos de mercado com grande potencial que
+              ainda carecem de soluções diferenciadas — com excelência
+              operacional e foco no cliente.
             </p>
           </div>
 
-          <div class="institucional-block animate-on-scroll">
-            <h3>Área e Região de Atuação</h3>
-            <p>
-              Atuamos nos segmentos de <strong>atacado e varejo</strong>, com
-              modelo de negócio flexível que atende tanto consumidores finais
-              quanto parceiros comerciais. Pedido mínimo de
-              <strong>R$ 500,00</strong> para lojistas e revendedores,
-              garantindo condições exclusivas.
-            </p>
-            <p>
-              Nossa matriz fica em <strong>São Paulo (Zona Norte)</strong>,
-              ponto estratégico que facilita a logística e a gestão das
-              operações. Atendemos <strong>todo o território brasileiro</strong>
-              através da nossa estrutura logística e comercial, com
-              planejamento de expansão física para novas cidades e regiões a
-              curto e médio prazo.
-            </p>
+          <div class="reach-card reach-coverage">
+            <span class="reach-label">Onde Estamos</span>
+            <h3>De São Paulo para todo o Brasil</h3>
+            <div class="reach-stats">
+              <div class="reach-stat">
+                <strong>Matriz</strong>
+                <span>São Paulo · Zona Norte</span>
+              </div>
+              <div class="reach-stat">
+                <strong>Atendimento</strong>
+                <span>Atacado e Varejo Nacional</span>
+              </div>
+              <div class="reach-stat">
+                <strong>Pedido mínimo</strong>
+                <span>R$ 500,00 (lojistas)</span>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div class="map-section animate-on-scroll">
+          <div class="map-header">
+            <h3>Nossa abrangência</h3>
+            <span class="map-pin-info">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Matriz · São Paulo / SP
+            </span>
+          </div>
+          <div id="brazil-map"></div>
         </div>
       </div>
     </section>
@@ -375,6 +444,12 @@
       </div>
     </footer>
 
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
