@@ -1108,6 +1108,147 @@ body.legal-page {
     color: var(--color-roxo-escuro);
 }
 
+/* Categorias Section */
+.categorias {
+    padding: 7rem 0;
+    background: linear-gradient(160deg, #2A0E3D 0%, var(--color-roxo-escuro) 45%, #5A1F6E 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.categorias::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.categorias-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 4rem;
+}
+
+.categorias-header .section-title {
+    color: #fff;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.categorias-header .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-dourado);
+}
+
+.categorias-header p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-top: 2rem;
+    font-weight: 300;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.categoria-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    cursor: default;
+}
+
+.categoria-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Ícone é o fallback. Foto cobre quando o arquivo existe. */
+.categoria-visual {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at 50% 40%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
+        linear-gradient(135deg, rgba(155, 44, 138, 0.25) 0%, rgba(74, 26, 107, 0.4) 100%);
+    color: #D4AF37;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.categoria-visual::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.5), transparent);
+    z-index: 3;
+}
+
+.categoria-visual svg {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.categoria-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.categoria-card:hover .categoria-photo {
+    transform: scale(1.08);
+}
+
+.categoria-card:hover .categoria-visual svg {
+    transform: scale(1.15) translateY(-4px);
+}
+
+.categoria-name {
+    padding: 1.2rem 1rem;
+    text-align: center;
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-style: italic;
+    letter-spacing: 0.3px;
+}
+
+.categorias-more {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    margin-top: 3rem;
+    font-style: italic;
+}
+
+.categorias .gallery-action {
+    margin-top: 2.5rem;
+}
+
 /* Gallery Section */
 .gallery {
     padding: 6rem 0;
@@ -1430,6 +1571,14 @@ body.legal-page {
     #brazil-map {
         height: 350px;
     }
+
+    .categorias-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .categorias-header .section-title {
+        font-size: 2.3rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1520,6 +1669,25 @@ body.legal-page {
 
     .cta-section {
         padding: 4rem 1rem;
+    }
+
+    .categorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .categoria-visual {
+        height: 150px;
+    }
+
+    .categoria-visual svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .categoria-name {
+        font-size: 1rem;
+        padding: 1rem 0.5rem;
     }
 
     .legal-content {
