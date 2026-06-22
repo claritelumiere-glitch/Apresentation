@@ -9,9 +9,11 @@
       content="Política de privacidade, pedidos, devoluções e termos de uso da Clarité Lumière."
     />
 
-    <!-- Fonts -->
+    <!-- Resource Hints (perf) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
@@ -25,7 +27,7 @@
     <nav class="navbar navbar-static">
       <div class="nav-container">
         <a href="index.html" class="logo-link">
-          <img src="./img/logo.png" alt="Clarité Lumière" class="logo" />
+          <img decoding="async" src="./img/logo.png" alt="Clarité Lumière" class="logo" />
         </a>
         <button class="hamburger" aria-label="Menu" id="hamburger-menu">
           <span></span>
@@ -36,13 +38,13 @@
           <a href="index.html">Voltar ao Site</a>
           <a
             href="https://clarite-catalogo-master.vercel.app/"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             class="nav-catalog-btn"
             >Catálogo Online</a
           >
           <a
             href="https://wa.me/5511915949625?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20sobre%20iluminação."
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             class="nav-cta"
             >Falar com Especialista</a
           >
@@ -67,7 +69,7 @@
           <a
             href="https://clarite-catalogo-master.vercel.app/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             >https://clarite-catalogo-master.vercel.app/</a
           >, incluindo o tratamento de dados pessoais, regras de pedido e
           procedimentos de troca/devolução.
@@ -458,7 +460,7 @@
       <div class="container footer-content">
         <div class="footer-logo-col">
           <a href="index.html" class="logo-link footer-logo-link">
-            <img
+            <img decoding="async"
               src="./img/logo.png"
               alt="Clarité Lumière"
               class="logo footer-logo"
@@ -470,7 +472,7 @@
         <div class="footer-links-col">
           <h3>Acesso Rápido</h3>
           <a href="index.html#sobre">Sobre a Marca</a>
-          <a href="https://clarite-catalogo-master.vercel.app/" target="_blank"
+          <a href="https://clarite-catalogo-master.vercel.app/" target="_blank" rel="noopener noreferrer"
             >Acessar Catálogo</a
           >
           <a href="politica.html">Política de Compras</a>
@@ -480,13 +482,13 @@
           <h3>Contato</h3>
           <a
             href="https://wa.me/5511915949625?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20sobre%20iluminação."
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             >WhatsApp Especializado</a
           >
           <a
             href="https://www.instagram.com/claritelumiere/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="social-link"
           >
             <svg
@@ -516,6 +518,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

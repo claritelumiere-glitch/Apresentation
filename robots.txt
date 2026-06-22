@@ -1,0 +1,36 @@
+# Clarité Lumière — landing institucional
+User-agent: *
+Allow: /
+Disallow: /.git/
+Disallow: /.vercel/
+Disallow: /.claude/
+
+# Bloquear scrapers comerciais e LLMs sem licença
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# Rate limiting hint
+Crawl-delay: 5
+
+Sitemap: https://www.claritelumiere.com.br/sitemap.xml
